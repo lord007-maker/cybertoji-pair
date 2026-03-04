@@ -1,0 +1,13 @@
+{
+  "name": "cybertoji-pair",
+  "version": "2.0.0",
+  "description": "CyberToji XMD — Système de Pairing Multi-Users",
+  "type": "module",
+  "dependencies": {
+    "bail-lite": "^1.0.3",
+    "pino": "^9.5.0"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
