@@ -10,7 +10,7 @@ export default async function handler(req, res) {
   const cleanPhone = String(phone).replace(/\D/g, '');
   if (cleanPhone.length < 7) return res.status(400).json({ error: 'Numéro invalide' });
 
-  const BOT_URL    = process.env.BOT_URL;
+  const BOT_URL = process.env.BOT_URL;
   const BOT_SECRET = process.env.BOT_SECRET || 'cybertoji-secret-2026';
   if (!BOT_URL) return res.status(500).json({ error: 'BOT_URL non configuré' });
 
@@ -28,4 +28,4 @@ export default async function handler(req, res) {
     if (err.name === 'TimeoutError') return res.status(504).json({ error: 'Bot ne répond pas' });
     return res.status(500).json({ error: err.message });
   }
-    }
+                                 }
